@@ -37,12 +37,13 @@ function eog_activate()
 {
 	global $db;
 
+	$col = $db->build_create_table_collation();
 	$db->query("CREATE TABLE `".TABLE_PREFIX."eog` (
 				`id` int(11) NOT NULL AUTO_INCREMENT,
 				`gid` int(10),
 				`subject` varchar(100) NOT NULL,
 				`message` text NOT NULL,
-	PRIMARY KEY (`id`) ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1");
+	PRIMARY KEY (`id`) ) ENGINE=MyISAM {$col}");
 }
 
 function eog_deactivate()
