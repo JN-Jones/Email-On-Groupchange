@@ -75,7 +75,7 @@ if($mybb->input['action'] == "do_add") {
 		flash_message("Du hast keine Email zum Löschen ausgewählt", 'error');
 		admin_redirect("index.php?module=".MODULE);
 	}
-	$id=intval($mybb->input['id']);
+	$id=(int)$mybb->input['id'];
 	$db->delete_query("eog", "id='{$id}'");
 	flash_message("Email erfolgreich gelöscht", 'success');
 	admin_redirect("index.php?module=".MODULE);
@@ -86,7 +86,7 @@ if($mybb->input['action'] == "do_add") {
 		flash_message("Du hast keine Email zum Bearbeiten ausgewählt", 'error');
 		admin_redirect("index.php?module=".MODULE);
 	}
-	$id=intval($mybb->input['id']);
+	$id=(int)$mybb->input['id'];
 	if(!verify_post_check($mybb->input['my_post_key']))
 	{
 		flash_message("Da lief wohl was falsch... Bitte versuche es erneut", 'error');
@@ -125,7 +125,7 @@ if($mybb->input['action'] == "do_add") {
 		flash_message("Du hast keine Email zum Bearbeiten ausgewählt", 'error');
 		admin_redirect("index.php?module=".MODULE);
 	}
-	$id=intval($mybb->input['id']);
+	$id=(int)$mybb->input['id'];
 	$query = $db->simple_select("eog", "*", "id='{$id}'");
 	if($db->num_rows($query) != 1)
 	{
