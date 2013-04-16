@@ -24,9 +24,9 @@ function eog_info()
 	return array(
 		"name"			=> "Email on Groupchange",
 		"description"	=> "Schreibt eine Email an Nutzer welche einer neuen Gruppe beitreten",
-		"website"		=> "http://jonesboard.tk/",
+		"website"		=> "http://jonesboard.de/",
 		"author"		=> "Jones",
-		"authorsite"	=> "http://jonesboard.tk",
+		"authorsite"	=> "http://jonesboard.de",
 		"version"		=> "1.0",
 		"guid" 			=> "",
 		"compatibility" => "*"
